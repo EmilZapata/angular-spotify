@@ -15,22 +15,24 @@ import { HttpClientModule } from '@angular/common/http';
 import { ROUTES } from './app.routes';
 //Importar Servicios
 import { SpotifyService } from './services/spotify.service';
-
-//Pipes
-import { NoimagePipe } from './pipes/noimage.pipe';
+//Components Custom
 import { CardsComponent } from './components/cards/cards.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
+//Pipes
+import { NoimagePipe } from './pipes/noimage.pipe';
+import { DomseguroPipe } from './pipes/domseguro.pipe';
 
 @NgModule({
   declarations: [
+    DomseguroPipe,
+    NoimagePipe,
+    CardsComponent,
+    LoadingComponent,
     AppComponent,
     HomeComponent,
     SearchComponent,
     ArtistaComponent,
     NavbarComponent,
-    NoimagePipe,
-    CardsComponent,
-    LoadingComponent,
   ],
   imports: [
     BrowserModule,
